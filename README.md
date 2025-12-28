@@ -11,8 +11,6 @@
   [![React Native](https://img.shields.io/badge/React_Native-20232A?logo=react&logoColor=61DAFB)](https://reactnative.dev/)
   [![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
   
-  [Live Demo](https://travelbuddy-738752644630.us-west1.run.app/) | [Documentation](#documentation) | [Report Bug](#issues) | [Request Feature](#contributing)
-</div>
 
 ---
 
