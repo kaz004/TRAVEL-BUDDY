@@ -203,7 +203,7 @@ function App() {
     };
   }, [currentTrack]);
 
-  // Loading Cycle Logic
+  // Premium Loading Cycle Logic
   useEffect(() => {
     let interval: any;
     if (isLoading) {
@@ -324,7 +324,7 @@ function App() {
       : 'traveling solo';
 
     const sessionPromise = ai.live.connect({
-      model: 'gemini-native-audio-latest',
+      model: 'gemini-2.5-flash-native-audio-preview-09-2025', // Corrected model name
       callbacks: {
         onopen: () => {
           setIsLiveConnected(true);
@@ -617,7 +617,7 @@ function App() {
                       <Search className="absolute left-4 top-4 text-slate-400" size={20} />
                     </form>
                     
-                    {/* Settings Quick Access - Restore Solo/Team */}
+                    {/* Restored Solo/Team Settings */}
                     <div className="flex gap-4 items-center bg-white dark:bg-slate-800 p-4 rounded-2xl border dark:border-slate-700 shadow-sm">
                        <button onClick={() => setTravelMode(settings.travelMode === 'solo' ? 'team' : 'solo')} className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-xl text-xs font-black uppercase transition-all ${settings.travelMode === 'solo' ? 'bg-slate-100 text-slate-600' : 'bg-emerald-100 text-emerald-700'}`}>
                           {settings.travelMode === 'solo' ? <User size={14}/> : <UserPlus size={14}/>} {settings.travelMode}
@@ -676,7 +676,7 @@ function App() {
                       ) : (
                         <>
                           {searchResults.map(place => (
-                            <PlaceCard key={place.id} place={place} onAdd={() => addToItinerary(place, activeDayId)} onBookmark={toggleBookmark} isBookmarked={bookmarks.some(b => b.id === selectedPlace?.id)} onClick={() => { setSelectedPlaceId(place.id); useTripStore.setState({ center: [place.lat, place.lng] }); }} />
+                            <PlaceCard key={place.id} place={place} onAdd={() => addToItinerary(place, activeDayId)} onBookmark={toggleBookmark} isBookmarked={bookmarks.some(b => b.id === place.id)} onClick={() => { setSelectedPlaceId(place.id); useTripStore.setState({ center: [place.lat, place.lng] }); }} />
                           ))}
                           {searchResults.length === 0 && (
                             <div className="text-center py-20 opacity-40">
@@ -697,7 +697,7 @@ function App() {
                     <button onClick={addDay} className="px-3 rounded-xl border border-dashed border-slate-300"><Plus size={18} /></button>
                   </div>
                   
-                  {/* Restore Budget Breakdown */}
+                  {/* Restored Budget Component */}
                   <BudgetOverview itinerary={itinerary} />
                   
                   {itinerary.find(d => d.id === activeDayId)?.items.map(item => (
