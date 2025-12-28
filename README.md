@@ -11,14 +11,21 @@
   [![React Native](https://img.shields.io/badge/React_Native-20232A?logo=react&logoColor=61DAFB)](https://reactnative.dev/)
   [![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
   
+  [Live Demo](https://travelbuddy-738752644630.us-west1.run.app/) | [Documentation](#documentation) | [Report Bug](#issues) | [Request Feature](#contributing)
+</div>
 
 ---
 
 ## 📸 Screenshot
 
 <div align="center">
-  <img src="./screenshots/homepage.jpg" alt="TravelBuddy Homepage" width="800"/>
+  <img
+    src="https://github.com/user-attachments/assets/3ff4656c-d7c0-49f1-94bf-10c51a5ae374"
+    alt="TravelBuddy Homepage"
+    width="800"
+  />
 </div>
+
 
 ---
 
