@@ -1,7 +1,6 @@
 # 🌍 TravelBuddy
 
 <div align="center">
-  <img src="https://travelbuddy-738752644630.us-west1.run.app/logo.png" alt="TravelBuddy Logo" width="120" height="120"/>
   
   ### Your AI-powered guide to the world.
   **Discover, Plan, and Explore.**
@@ -97,8 +96,4 @@
 - **GitHub Actions** - CI/CD pipeline
 
 ---
-
-## 🎯 Getting Started
-
-### Prerequisites
 
